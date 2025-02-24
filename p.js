@@ -61,30 +61,42 @@ tl.from(".ab-right", {
 
 
 tl.from(".upper-text",{
-  height:0,x:50,y:300,
+  height:0,x:50,y:200,duration:2,
   scrollTrigger:{
-    scrub:2, pin:true, start:"20% 70%",end:"25% 50%",scroller:"body", 
+    scrub:2, pin:true, start:"20% 80%",end:"24% 62%",scroller:"body"
   }
 })
 
 tl.to(".upper-text>p",{
-    x:-600, scrollTrigger:{
-     scrub:2, pin:true,  start:"20% 60%",end:"25% 45%", scroller:"body",
+    x:-700, scrollTrigger:{
+     scrub:2, pin:true,  start:"20% 70%",end:"25% 45%", scroller:"body"
     }
 })
 
 tl.from(".text-anim",{
-   height:0,x:50,y:300,
+   height:0,x:50,y:200,duartion:2,
    scrollTrigger:{
-    scrub:2,scroller:"body", pin:true, start:"45% 80%", end:"50% 60%",
+    scrub:1,scroller:"body", pin:true, start:"44% 85%", end:"46% 75%"
    }
 })
 tl.from(".color-box",{
-  width:150, opacity:0, 
+  width:100, opacity:0, 
   scrollTrigger:{
-    scroller:"body", pin:true, markers:true, start:"50% 70%", end:"55% 60%",scrub:2
+    scroller:"body", pin:true,  start:"50% 95%", end:"50% 76%",scrub:2
   }
 })
+tl.from(".sec-color1",{
+   width:0,opacity:0, scrollTrigger:{
+    scrub:2, scroller:"body", start:"58% 85%",end:"60% 65%",pin:true
+   }
+})
+
+tl.from(".last",{
+  width:450,opacity:0,scrollTrigger:{
+    scrub:2, pin:true, start:"67% 75%",end:"69% 66%",markers:true 
+  }
+})
+
 let catchme = document.querySelector(".last");
 let catchup = document.querySelector(".catch-img");
 catchme.addEventListener("mouseenter",function(){

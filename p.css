@@ -290,7 +290,7 @@ section>span{
 } 
 .sec-color1{
     height: 100%; width: 32%; background-color:#5b8f67 ; border-radius: 5px; padding: 1.5vw 1vw; 
-    position: relative;
+    position: relative; overflow: hidden;
 }
 .sec-box-con>.sec-color1:nth-child(2){
     background-color: #ffc1f5; color: black;
@@ -329,7 +329,7 @@ section>span{
 }
 .last{
     width: 98.5vw; height: 100vh;  display: flex; justify-content: center;
-    align-items: center; 
+    align-items: center; overflow: hidden;
 }
 .catch-me{
     width: 95%; height: 90%; border: 2px solid black; display: flex; justify-content: center;
