@@ -93,7 +93,7 @@ tl.from(".sec-color1",{
 
 tl.from(".last",{
   width:450,opacity:0,scrollTrigger:{
-    scrub:2, pin:true, start:"67% 75%",end:"69% 66%",markers:true 
+    scrub:2, pin:true, start:"67% 75%",end:"69% 66%"
   }
 })
 
