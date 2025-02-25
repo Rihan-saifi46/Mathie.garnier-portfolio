@@ -24,12 +24,12 @@ tl.to(".landing-page",{
       pin:true, start:"top% 20%" , end :"50% 50%", scrub:1
     }
 })
-tl.to(".boy-img",{
-     opacity:0,
-    scrollTrigger:{
-      pin:true, start:"top% 50%" , end :"50% 50%", scrub:1
-    }
-})
+// tl.to(".boy-img",{
+//      opacity:0.,
+//     scrollTrigger:{
+//       pin:true, start:"top% 50%" , end :"50% 50%", scrub:1
+//     }
+// })
 
 tl.from(".ab-left>h2", {
   
