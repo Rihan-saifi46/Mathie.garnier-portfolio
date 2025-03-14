@@ -5,12 +5,12 @@
 
 .landing-page{
      background-image: url(https://i.pinimg.com/736x/b6/e5/9f/b6e59f2ead126e6ebfc2178d09176439.jpg); background-position: center; background-size:24%; 
-     height: 100vh; width: 98.5vw; z-index: 1; 
+     height: 100vh; width: 98.5vw; z-index: 1; flex-wrap: wrap;
     background-repeat: repeat; background-attachment: scroll; overflow: hidden;
 }
 nav{
     width: 94vw; height: 55px; border-radius: 15px; background-color:black; z-index: 99;
-    position: absolute; left: 50%; top: 2vw; transform: translate(-50%); color: white;
+    position: absolute; left: 50%; top: 2vw; transform: translate(-50%); color: white; flex-wrap: wrap;
 }
 .nav-left{
     width: 44%; height: 100%;  position: absolute;
@@ -20,6 +20,22 @@ nav{
 .nav-left .img{
   background-image: url(https://cdn.prod.website-files.com/637853f6f3d6aacb22fa97db/638c61879bf1380112df5835_Group%2076.svg); background-position: center; background-repeat: no-repeat;
    background-size: cover; height: 100%; width: 9%; border-radius: 5px;  margin-left: 1vw;
+}
+@media (max-width:600px){
+    .landing-page{
+        height: 100vh; width: 100vw; position: relative;
+    }
+    nav{
+        width: 90%; height: 12vw; display: flex; justify-content: space-between; position: absolute;
+        top: 5vw;
+    }
+    .nav-left>.img{
+       height: 5vw;
+    }
+    .nav-left>span{
+        white-space: nowrap; width: 37%; font-size: 2vw;
+    }
+   
 }
 .nav-left>span{
     margin-left: 1vw;
@@ -33,6 +49,15 @@ nav{
 }
 .nav-right>span{
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 14px; font-weight: 600; text-transform: uppercase;
+}
+@media (max-width:600px){
+    .nav-right{
+      width: 18vw;  display: flex; gap: 1vw; padding-left: 1.6vw;
+    }
+   .r-svg{
+    height: 4vw;
+   }
+   
 }
 .l-text{
     width: 98.5vw;overflow: hidden; 
@@ -58,6 +83,7 @@ nav{
 .boy-img>img{
     height: 100%; 
 }
+
 .t0t4{
     height: 4vw; width: 5.3vw; background-color: white;border-radius: 10px; position: absolute;
     right: 3vw; bottom: 2vw; display: flex; padding-left: .5vw; gap: .4vw; align-items: center;
@@ -102,27 +128,42 @@ nav{
     opacity: 0;
    } 
 }
+@media (max-width:600px){
+
+    .scrolling-content{
+     height: 17vw;
+    }
+     .boy-img{
+      height: 72vw; position: absolute; top: 12vw; background-attachment: fixed;
+     }
+     .boy-img>img{
+      height: 100%; position: absolute; 
+     }
+     .t0t4{
+      display: none;
+     }
+     .scroll-down{
+      display: none;
+     }
+  }
 .container{ 
     height: 94vh; width: 98.5vw; background-color: black;  display: flex; justify-content: space-between;
-    position: relative; z-index: 10;
+    position: relative; z-index: 10; flex-wrap: wrap;
 }
 .ab-left{
-    color: #fff; height: 75px;   font-size: 4vw; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; position: absolute; top: 7vw; left: 1.7vw; overflow: hidden; display: flex; align-items: center;
+    color: #fff; height: 75px;   font-size: 4vw; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; position: absolute; top: 7vw; left: 1.7vw; overflow: hidden; display: flex; align-items: center; flex-wrap: wrap;
 }
 .ab-left>h2{
     font-weight: 500;
 }
 .ab-right{
-    color: #fff; height: 470px; width: 820px;   font-size: 2vw; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: 300; position: absolute; top: 6vw; right: 0vw; line-height: 3.5vw;
+    color: #fff; height: 470px; width: 820px;   font-size: 2vw; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: 300; position: absolute; top: 6vw; right: 0vw; line-height: 3.5vw; flex-wrap: wrap;
 }
 .ab-right>p{
     font-weight: 500; font-size: 2.4vw;
 }
 .ab-right>p>span{
     font-weight: 100; font-size: 1.3vw; text-transform: uppercase;
-}
-.ab-right>span{
-    font-weight: 100; font-size: 1.3vw; text-transform: uppercase; position: absolute; bottom: 8vw;
 }
 .img-c-1{
     height: 45px; width: 45px; border-radius: 10px; background-color: rgb(41, 40, 40); position: absolute; bottom: 4.2vw;
@@ -134,37 +175,98 @@ nav{
 section>span{
     position: absolute; bottom: 4.2vw; left: 5vw; font-size: 1.2vw; 
 }
+@media (max-width:600px){
+    .container{
+      height: 80vh; width: 98.5vw;  display: flex; flex-direction: column; justify-content: space-between; position: relative;
+    }
+    .ab-left{
+        height: 18vw; width: 57vw;  display: flex; align-items: center;
+        justify-content: start; padding-left: 5vw; position: absolute; top: 0;
+    }
+    .ab-left>h2{
+        font-size: 11vw;
+    }
+    .ab-right{
+        width: 100%; height: 70%;  position: absolute; left: 0; top: 18vw;
+        padding-top: 5vw; padding-left: 5vw; display: flex; flex-direction: column; gap: 5vw;
+    }
+    .ab-right>p{
+        width: 80%; font-size: 3vw;  font-weight: 400;
+    }
+    .ab-right>span{
+        font-size: 2.5vw;  font-weight: 400;
+    }
+    .img-c-1{
+       display: none;
+    }
+    .ab-right>section>span{
+        display: none;
+    }
+    
+}
 .page2{
-    height: 220vh; width: 98.5vw; z-index: 99; position: relative;
+    height: 220vh; width: 98.5vw; z-index: 99; position: relative; flex-wrap: wrap;
 }
 .con1{
     height: 200vh; width: 98.5vw;  display: flex; flex-direction: column;
-    justify-content: space-evenly; align-items: center; 
+    justify-content: space-evenly; align-items: center;  
 }
 .upper-text{
-    height: 50vh; width: 90vw; border: 1px solid #111;  border-radius: 10px; display: flex; align-items: center;
+    height: 30vh; width: 90vw; border: 1px solid #111;  border-radius: 10px; display: flex; align-items: center;
      white-space: nowrap; gap: 1.3vw; overflow: hidden; margin-top: 5vw;
 } 
 .upper-text>p{
     text-transform: uppercase; font-size: 9vw; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: 600;
     transform: translatex(-100px);
 }
+@media (max-width:600px){
+   .page2{
+    height: 225vh; width: 98.5vw; 
+   }
+   .con1{
+    height: 225vh; width: 98.5vw; 
+   }
+   .upper-text{
+    height: 34vh;
+   }
+   .upper-text>p{
+    font-size: 13vw;
+   }
+    
+}
 .project{
     height: 30vh; width: 95vw; border-bottom: 1px solid #111 ; display: flex; align-items: center; padding-left: 2vw; margin-top: 3vw;
-    gap: 2.5vw;
+    gap: 2.5vw; flex-wrap: wrap;
 }
 .project>h1{
     font-size: 6vw;  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: 600; 
 }
 .last-of{
     height: 40vh; width: 90vw;  display: flex; justify-content: baseline;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;  flex-wrap: wrap;
 }
 .four{
     height: 90%; width: 13vw; 
 }
 .four>span{
     font-size: 1.1vw; color: #363636; font-weight: 400;
+}
+@media (max-width:600px){
+    .project{
+        height: 17vw;
+    }
+    .last-of{
+        height: 27vw;  
+    }
+    .four{
+       height: 100%;  width: 22%;
+    }
+    .four>span{
+    font-size: 3vw; font-weight: 500;
+    }
+    .p>p{
+        font-size: 2vw; font-weight: 400;
+    }
 }
 .tw-four{
     width: 28vw;
@@ -199,13 +301,13 @@ section>span{
 }
 .con2{
     height: calc(220vh - 120vh); width: 98.5vw;  display: flex; flex-direction: column;
-    justify-content: center; align-items: center; 
+    justify-content: center; align-items: center;  
 }
 .project{
     position: sticky; top: 0;  background-color: white; z-index: 999;
 }
 .c-pc{
-    height: 20vh; width: 95vw; border-bottom: 1px solid #111; position: relative;
+    height: 20vh; width: 95vw; border-bottom: 1px solid #111; position: relative;flex-wrap: wrap;
 }
 .c-pc>svg:nth-child(1){
    height: 2vw; position: absolute; top: 50%; transform: translate(-50%); left: 2vw;
@@ -224,8 +326,23 @@ section>span{
 .c-pc>span>svg:nth-child(1){
     height: 1.3vw; width: 1.5vw; 
 }
+@media (max-width:600px){
+  .con2{
+    height: 92vw;  display: flex; flex-direction: column;justify-content: start;
+    
+  }
+  .c-pc{
+    height: 22vw;
+  }
+  .c-pc>svg:nth-child(1){
+    display: none;
+   }
+  .c-pc>svg:nth-child(2){
+    height: 3.5vw; left: 1vw;top: 7vw; display: none;
+   }
+}
 .barrett, .barrett2, .Instead, .webflow, .club{
-    position: absolute; top: 45%; transform: translate(-45%); border-left: 1px solid #111; 
+    position: absolute; top: 45%; transform: translate(-45%); border-left: 1px solid #111; flex-wrap: wrap;
   left: 25vw; font-size: 2vw; font-weight: 400; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; padding-left: 2vw;
 }
 .barrett2{
@@ -241,15 +358,49 @@ section>span{
    left: 28vw;
 }
 .c-pc:hover.c-pc>img{
-   opacity: 1; border-radius: 5px;
+    opacity: 1; border-radius: 5px;
+ }
+@media (max-width:600px){
+  .barrett{
+    border-left: 1.5px solid black; font-size: 2.8vw; font-weight: 500; white-space: nowrap;
+  }
+  .lele{
+    opacity: 1 !important;  height: 18vw !important; width: 17vw !important; top: 0 !important;
+    border-radius: 15px; object-fit: cover !important;left: 69vw !important;
+  }
+  .Instead{
+    left: 20vw;
+  }
+  .webflow{
+    left: 18.7vw;
+  }
+  .club{
+    left: 29vw;
+  }
+  .lele5{
+    top: 0vw !important;
+  }
+  .lele4{
+    top: 0vw !important;
+  }
+  .lele3{
+    top: 0vw !important;
+  }
+  .lele2{
+    top: 0vw !important;
+  }
+  .bkl{
+    display: none !important;
+  }
 }
+
 .page3{
-    height: 200vh; width: 98.5vw; position: relative;  
+    height: 200vh; width: 98.5vw; position: relative;   flex-wrap: wrap;
 }
 .text-anim{
     height: 30vh; width: 90vw; background-color: black; color: white; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 7.3vw; font-weight: 600; overflow: hidden; display: flex; align-items: center; gap: 4vw;
-    position: absolute;left: 50%; transform: translate(-50%); border-radius: 5px; 
+    position: absolute;left: 50%; transform: translate(-50%); border-radius: 5px;  
 }
 .text-anim>p{
     animation: text-one 3s linear  infinite;
@@ -262,12 +413,13 @@ section>span{
         transform: translate(-104.5%);
     }
 }
+
 .cards-container{
-    height: calc(200vh - 30vh); position: absolute; top: 35vh;  width: 90vw;
+    height: calc(200vh - 30vh); position: absolute; top: 35vh;  width: 90vw; flex-wrap: wrap;
     left: 50%; transform: translate(-50%); display: flex; flex-direction: column; justify-content: space-evenly;
 }
 .first-box-con{
-    height: 80vh; width: 100%; display: flex; justify-content: space-between;
+    height: 80vh; width: 100%; display: flex; justify-content: space-between; 
 }
 .color-box{
     height: 80vh; width: 49.3%; border-radius: 4px; background-color: #fdff5d; display: flex;
@@ -277,17 +429,18 @@ section>span{
    background-color: #ff3e3e; color: white; padding: 1.2vw 1vw;
 }
 .color-box>p{
-   font-size: 2vw; text-transform: uppercase; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: 500;
-}
-.color-box>p:nth-child(2){
+    font-size: 2vw; text-transform: uppercase; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: 500;
+ }
+ .sec-box-con{
+    height: 70vh; width: 100%;  display: flex; justify-content: space-evenly; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: white; flex-wrap: wrap;
+} 
+ .color-box>p:nth-child(2){
     font-size: 4vw; display: flex; align-items: center; gap: 1vw; white-space: nowrap;
 }
 .sec-color>p>svg{
     height: 9vw; width: 8vw;
 } 
-.sec-box-con{
-    height: 70vh; width: 100%;  display: flex; justify-content: space-evenly; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: white;
-} 
+
 .sec-color1{
     height: 100%; width: 32%; background-color:#5b8f67 ; border-radius: 5px; padding: 1.5vw 1vw; 
     position: relative; overflow: hidden;
@@ -302,16 +455,63 @@ section>span{
     text-transform: uppercase; font-size: 2vw; font-weight: 600; white-space: nowrap; 
 }
 .sec-color1>button{
-   font-size: 1.2vw; text-transform: uppercase;  font-weight: 600; padding: .7vw 1.2vw; border-radius: 5px; border: 1.5px solid #111;position: absolute; top: 48%; transform: translate(-48%); left: 22%;
-   transition: .5s;
+    font-size: 1.2vw; text-transform: uppercase;  font-weight: 600; padding: .7vw 1.2vw; border-radius: 5px; border: 1.5px solid #111;position: absolute; top: 48%; transform: translate(-48%); left: 22%;
+    transition: .5s;
+ }
+ .sec-color1>button:nth-child(2){
+    font-size: 1.2vw; text-transform: uppercase;  font-weight: 600; padding: .7vw 1.2vw; border-radius: 5px; border: 1.5px solid #111;  transition: .5s;
+    position: absolute; top: 36%; transform: translate(-36%); left: 20%;
+ }
+ .sec-color1>h2{
+     font-size: 5vw; font-weight: 600; position: absolute; bottom: 2vw;
+ }
+@media (max-width:600px){
+    .page3{
+        height: 345vh; width: 98.5vw;  padding-top: 4vw;
+    }
+    .text-anim{
+        height: 30vh; width: 90vw;
+    }
+    .text-anim>p{
+        font-size: 15vw; font-weight: 400;
+    } 
+    .cards-container{
+         position: relative; height: calc(345vh - 40vh); 
+        display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .first-box-con{
+        height: 148vh; width: 100%; 
+        display: flex; flex-direction: column; gap: 2vw;
+    }
+    .color-box{
+        height: 73vh; width: 100%;
+    }
+    .color-box>p{
+        font-size: 4vw; font-weight: 400;
+    }
+    .color-box>p:nth-child(2)>img{
+        height: 16vw;
+    }
+    .color-box>p:nth-child(2){
+        font-size: 6.5vw; font-weight: 600;
+    }
+    .sec-box-con{
+        height: 145vh; width: 100%; display: flex; flex-direction: column;
+    }
+    .sec-color1{
+        height: 45vh; width: 70%; padding-left: 3vw;
+    }
+    .sec-color1>p{
+      font-size: 3vw;
+    }
+    .sec-color1>button{
+        padding: .7vw 2vw !important; font-size: 2vw !important; font-weight: 500 !important;
+    }
+    .sec-color1>h2{
+        font-size: 8vw; font-weight: 600;
+    }
 }
-.sec-color1>button:nth-child(2){
-   font-size: 1.2vw; text-transform: uppercase;  font-weight: 600; padding: .7vw 1.2vw; border-radius: 5px; border: 1.5px solid #111;  transition: .5s;
-   position: absolute; top: 36%; transform: translate(-36%); left: 20%;
-}
-.sec-color1>h2{
-    font-size: 5vw; font-weight: 600; position: absolute; bottom: 2vw;
-}
+
 .pink-box>p{
     width: 70%; font-size: 1.8vw;
 }
@@ -327,12 +527,43 @@ section>span{
 .neela-dabba>button:nth-child(2){
  position: absolute; left: 29%;
 }
+
 .last{
     width: 98.5vw; height: 100vh;  display: flex; justify-content: center;
-    align-items: center; overflow: hidden;
+    align-items: center; overflow: hidden; flex-wrap: wrap;
+}
+@media (max-width:600px){
+    .pink-box>p{
+        font-size: 3vw;
+    }
+    .pink-box>button:nth-child(2){
+        padding: .7vw 2vw !important; font-size: 2vw !important; font-weight: 500;
+       
+    }
+    .pink-box>button:nth-child(3){
+        padding: .7vw 2vw !important; font-size: 2vw !important; font-weight: 500;
+    }
+    .leen>img{
+         height: 10vw;
+    }
+    .leen{
+        display: flex; gap: 2vw;
+    }
+    .neela-dabba>p{
+        font-size: 4vw !important; margin-left: 2vw;
+    }
+    .neela-dabba>button{
+        padding: 1.7vw 2vw !important; font-size: 2vw !important; font-weight: 500;
+    }
+    .neela-dabba>h2{
+        margin-left: 2vw;
+    }
+    .last{
+        display: none;
+    }
 }
 .catch-me{
-    width: 95%; height: 90%; border: 2px solid black; display: flex; justify-content: center;
+    width: 95%; height: 90%; border: 2px solid black; display: flex; justify-content: center; flex-wrap: wrap;
     align-items: center;  border-radius: 10px; background-color: #111;position: relative; z-index: 0;
 }
 .catch-me>p{
@@ -344,7 +575,7 @@ section>span{
     mix-blend-mode: difference;
 }
 .footer{
-    height: 100vh; width: 98.5vw;
+    height: 100vh; width: 98.5vw; flex-wrap: wrap;
 }
 .f-top{
     height: 30vh; width: 100%;  display: flex; justify-content: center;
@@ -354,11 +585,11 @@ section>span{
 }
 .logos{
     height: 35vh; width: 100%; display: flex; justify-content: space-between;
-    font-size: 2vw; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2vw; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; flex-wrap: wrap;
 }
 .left-lo{
     height: 100%; width: 43%; display: flex; justify-content: space-evenly; align-items: center;
-     flex-direction: column; padding-top: 2vw;
+     flex-direction: column; padding-top: 2vw; flex-wrap: wrap;
 }
 .left-lo>p>span>img{
    height: 2vw; width: 2vw; 
@@ -367,7 +598,7 @@ section>span{
     font-size: 1vw;  color: #363636;
 }
 .right-lo{
-    height: 100%; width: 60%; position: relative;
+    height: 100%; width: 60%; position: relative; flex-wrap: wrap;
 }
 .right-lo>button{
    height: 5vw; width: 20vw; font-size: 1.5vw; font-weight: 100; border: 1.3px solid #111;
@@ -396,4 +627,28 @@ section>span{
 .insta:hover.insta::before{
     height: 100%; width: 100%; position: absolute; top: 0; left: 0;
     background-color: #1111118f; z-index: 0;  
+}
+
+@media (max-width:600px){
+    .footer{ 
+        height: 80vh; width: 100vw;  padding-top: 4vw;
+    }
+   .logos{
+    height: 40vh; width: 100%;  display: flex; 
+   }
+   .left-lo{
+    height: 100%; width: 50%;  display: flex; flex-direction: column; padding: 2vw 5vw;
+   }
+   .left-lo>p{
+    font-size: 4vw; width: 80%;
+   }
+   .left-lo>p:nth-child(2){
+    font-size: 2vw; width: 100%; 
+   }
+   .right-lo{
+    height: 100%; width: 50%;  position: relative;
+   }
+   .right-lo>button{
+    margin-left: -8vw; margin-top: 2vw; font-size: 2vw; font-weight: 500; border: 1px solid black;
+   }
 }
